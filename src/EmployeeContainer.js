@@ -45,7 +45,6 @@ class EmployeeContainer extends Component {
       currentName: workersArray[this.state.currentIndex].name,
       currentPosition: workersArray[this.state.currentIndex].role
     })
-    console.log(this.state.currentIndex)
   }
   render() {
     const changeState = () => {
