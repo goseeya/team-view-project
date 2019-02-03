@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import './style/EmployeeContainer.css';
 import EmployeeItem from './EmployeeItem';
 import Slider from './Slider';
+import Responsive from 'react-responsive';
 import { jsonResponse } from './fakeData.js';
+
+const Desktop = props => <Responsive {...props} minWidth={800} />;
+const Mobile = props => <Responsive {...props} maxWidth={800} />;
 
 class EmployeeContainer extends Component {
   constructor(props) {
@@ -49,17 +53,25 @@ class EmployeeContainer extends Component {
         isSliderVisible: true
       });
     }
-    console.log(jsonResponse);
     const employees = jsonResponse.map((object, index) => {
       return (
-        <EmployeeItem onContactClick={() => {window.location.href = `mailto:${object.mail}`;console.log(object, object.mail)}} onClick={() => {this.updateThisData(object.name, object.id);this.setState({isSliderVisible: true, currentName: object.name, currentPosition: object.role})}} key={index} avatar={object.imageUrl} name={object.name} role={object.role} location={object.location} />
+        <EmployeeItem onContactClick={() => {window.location.href = `mailto:${object.mail}`}} onClick={() => {this.updateThisData(object.name, object.id);this.setState({isSliderVisible: true, currentName: object.name, currentPosition: object.role})}} key={index} avatar={object.imageUrl} name={object.name} role={object.role} mail={object.mail} location={object.location} />
       )
     })
     return (
-      <div className='employeeContainer'>
-        {this.state.isSliderVisible
-          ? <Slider currentName={this.state.currentName} currentPosition={this.state.currentPosition} onLeftClick={this.onSliderLeftClick} onRightClick={this.onSliderRightClick} onCloseboxClick={this.hideSlider} visible={this.state.isSliderVisible}/>
-          : employees}
+      <div>
+        <Desktop>
+          <div className='employeeContainerDesktop'>
+            {this.state.isSliderVisible
+              ? <Slider currentName={this.state.currentName} currentPosition={this.state.currentPosition} onLeftClick={this.onSliderLeftClick} onRightClick={this.onSliderRightClick} onCloseboxClick={this.hideSlider} visible={this.state.isSliderVisible}/>
+              : employees}
+          </div>
+        </Desktop>
+        <Mobile>
+          <div className='employeeContainerMobile'>
+            {employees}
+          </div>
+        </Mobile>
       </div>
     );
   }

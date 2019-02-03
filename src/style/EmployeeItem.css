@@ -9,6 +9,7 @@
   z-index: 3;
 }
 .envelope {
+  position: absolute;
   margin-left: 20px;
   top: 14px;
   cursor: pointer;
