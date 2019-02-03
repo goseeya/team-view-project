@@ -1,0 +1,59 @@
+.sliderContainer {
+  height: 650px;
+  background-color: #48c3dc;
+  z-index: 4;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+}
+.close {
+  color: white;
+  text-align: right;
+  font-size: 60px;
+  font-weight: lighter;
+  margin-right: 20px;
+  cursor: pointer;
+  font-family: 'Arial Black';
+}
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.left, .right{
+  color: white;
+  font-size: 60px;
+  font-weight: lighter;
+  cursor: pointer;
+  font-family: 'Calibri';
+  top: 70%;
+}
+.right {
+  right: 10px;
+}
+.left {
+  left: 10px;
+}
+.employeeDataHolder {
+  width: 50%;
+  height: 200px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  border: 2px dashed rgba(255, 255, 255, 0.49);
+}
+.positionHolder {
+  margin-top: 30px;
+  font-weight: lighter;
+  font-size: 30px;
+}
+.nameHolder {
+  margin-top: 30px;
+  font-weight: bolder;
+  font-size: 60px;
+}
