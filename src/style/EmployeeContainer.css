@@ -1,13 +1,12 @@
-.employeeContainerDesktop {
-  width: 900px;
+.employeeContainer {
+  max-width: 900px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
-.employeeContainerMobile {
-  width: 900px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: url('bg.png');
+
+@media (max-width: 800px) {
+  .employeeContainer {
+    justify-content: center;
+  }
 }

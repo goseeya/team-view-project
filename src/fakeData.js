@@ -35,7 +35,7 @@ export const jsonResponse = [
     "imageUrl": "https://randomuser.me/api/portraits/men/2.jpg",
     "name": "David Saunders",
     "role": "Business Development",
-    "location": "Warsaw",
+    "location": "London",
     "mail": 'dsaunders@company.com',
     "id": 4
   },
@@ -43,7 +43,7 @@ export const jsonResponse = [
     "imageUrl": "https://randomuser.me/api/portraits/men/3.jpg",
     "name": "Adam Eldridge",
     "role": "Business Development Director US",
-    "location": "Warsaw",
+    "location": "London",
     "mail": 'aeldridge@company.com',
     "id": 5
   },

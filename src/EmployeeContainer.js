@@ -59,18 +59,11 @@ class EmployeeContainer extends Component {
     })
     return (
       <div>
-        <Desktop>
-          <div className='employeeContainerDesktop'>
-            {this.state.isSliderVisible
-              ? <Slider currentName={this.state.currentName} currentPosition={this.state.currentPosition} onLeftClick={this.onSliderLeftClick} onRightClick={this.onSliderRightClick} onCloseboxClick={this.hideSlider} visible={this.state.isSliderVisible}/>
-              : employees}
-          </div>
-        </Desktop>
-        <Mobile>
-          <div className='employeeContainerMobile'>
-            {employees}
-          </div>
-        </Mobile>
+        <div className='employeeContainer'>
+          {this.state.isSliderVisible
+            ? <Slider currentName={this.state.currentName} currentPosition={this.state.currentPosition} onLeftClick={this.onSliderLeftClick} onRightClick={this.onSliderRightClick} onCloseboxClick={this.hideSlider} visible={this.state.isSliderVisible}/>
+            : employees}
+        </div>
       </div>
     );
   }
