@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import './style/Slider.css';
 
 class Slider extends Component {
-  constructor(props) {
-    super(props);
-
-  }
   render() {
     return (
       <div>
